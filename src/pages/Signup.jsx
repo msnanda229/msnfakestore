@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
-import { auth } from '../firebase';
+import { auth } from './firebase';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Signup.css';
