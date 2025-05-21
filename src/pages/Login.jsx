@@ -1,7 +1,6 @@
-import Firebase from './pages/Firebase';
 import { useState, useEffect } from 'react';
 import { signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
-import { auth, githubProvider, googleProvider } from './pages/Firebase';
+import { auth,googleProvider } from './pages/Firebase';
 import { useNavigate, Link } from 'react-router-dom';
 
 import { ToastContainer, toast } from 'react-toastify';
@@ -49,17 +48,6 @@ const Login = () => {
     }
   };
 
-  const loginWithGithub = async () => {
-    try {
-      await signInWithPopup(auth, githubProvider);
-      localStorage.setItem('isAuthenticated', 'true');
-      toast.success('Login successful');
-      setTimeout(() => navigate('/homestore'), 1000);
-    } catch (err) {
-      toast.error(err.message);
-    }
-  };
-
   return (
     <div className="login-container">
       <form onSubmit={login} className="login-form">
@@ -81,9 +69,6 @@ const Login = () => {
         <button type="submit">Login</button>
         <button type="button" onClick={loginWithGoogle} className="google-btn">
           Login with Google
-        </button>
-        <button type="button" onClick={loginWithGithub} className="github-btn">
-          Login with Github
         </button>
 
         <p>Don't have an account? <Link to="/">Sign up</Link></p>
