@@ -5,6 +5,7 @@ import Forgotpass from './pages/Forgotpass';
 import Homestore from './pages/Homestore';
 import Addcart from './pages/Addcart';
 import Signup from './pages/Signup';
+import Firebase from './pages/Firebase';
 
 // ProtectedRoute Component
 const ProtectedRoute = ({ element }) => {
