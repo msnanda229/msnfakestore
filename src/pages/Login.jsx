@@ -1,3 +1,4 @@
+import Firebase from './pages/Firebase';
 import { useState, useEffect } from 'react';
 import { signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 import { auth, githubProvider, googleProvider } from './pages/Firebase';
